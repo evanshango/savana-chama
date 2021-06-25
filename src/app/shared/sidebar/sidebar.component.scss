@@ -1,0 +1,129 @@
+.sidebar {
+  width: 260px;
+  background: linear-gradient(90deg, rgb(50, 27, 20) 0%, rgb(40, 23, 13) 90%);
+  height: calc(100vh - 80px);
+  position: fixed;
+  top: 80px;
+  display: block;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  overflow-y: auto;
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+      margin: auto .5rem;
+    }
+  }
+
+  .item-active {
+    background: red !important;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    color: #848484;
+    background: rgb(50, 27, 20);
+    font-size: 14px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        width: 100%;
+
+        a {
+          color: #fff;
+          display: flex;
+          align-items: center;
+          padding: .4rem 1rem;
+          border-bottom-left-radius: 2rem;
+          border-top-left-radius: 2rem;
+          margin: .5rem 0;
+          font-size: .95rem;
+
+          i {
+            margin-right: 1rem;
+            font-size: 1.2rem;
+
+            @media screen and (max-width: 768px){
+              font-size: 1.5rem;
+            }
+          }
+
+          &:hover {
+            background: red;
+          }
+        }
+      }
+    }
+  }
+
+  .logout{
+    padding: .6rem 1rem;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #232323;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+
+    i {
+      font-size: 1.2rem;
+      margin-right: 1rem;
+    }
+
+    &:hover{
+      background: red;
+    }
+
+    span {
+      font-size: .95rem;
+    }
+  }
+
+  .account{
+    background: rgb(50, 27, 20);
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    margin: .5rem 0;
+    padding: .5rem;
+
+    .avatar{
+      background: #848484;
+      border-radius: 50%;
+      padding: 2rem;
+      height: 90px;
+      width: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i{
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}

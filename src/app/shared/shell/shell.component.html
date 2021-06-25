@@ -1,0 +1,9 @@
+<div class="dashboard-wrapper">
+  <app-sidebar [menuClicked]="menuClicked"></app-sidebar>
+  <div class="dashboard-content">
+    <app-navbar (menuClicked)="sidebarToggler()"></app-navbar>
+    <div class="dashboard-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

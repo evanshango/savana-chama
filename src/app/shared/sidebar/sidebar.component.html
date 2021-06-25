@@ -1,0 +1,24 @@
+<div (window:resize)="windowResize($event)" class="sidebar"
+     [style]="menuClicked || windowWidth > 768 ? 'display: block;' : 'display: none;'">
+  <div class="account">
+    <div class="avatar">
+      <i class="pi pi-user"></i>
+    </div>
+    <h5 style="margin-bottom: .5rem">Logged in as Admin</h5>
+  </div>
+  <div *ngFor="let action of sidebarActions">
+    <h2>{{action.title}}</h2>
+    <div class="links">
+      <ul *ngFor="let menuItem of action.data">
+        <li>
+          <a [routerLink]="menuItem.link" routerLinkActive="item-active">
+            <i [class]="menuItem.icon"></i>{{menuItem.name}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="logout">
+    <i class="pi pi-sign-out"></i><span>Logout</span>
+  </div>
+</div>

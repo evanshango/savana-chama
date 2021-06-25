@@ -1,0 +1,19 @@
+.dashboard{
+  &-wrapper{
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &-content{
+    width: 100%;
+  }
+
+  &-body{
+    margin-top: 80px;
+    margin-left: 260px;
+
+    @media screen and (max-width: 768px){
+      margin-left: 0;
+    }
+  }
+}
